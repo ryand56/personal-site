@@ -10,6 +10,10 @@ const ThemeToggle = () => {
         if (!storedTheme)
         {
             localStorage.setItem("theme", theme);
+            if (theme === "dark")
+            {
+                document.querySelector("html")?.classList.add("dark");
+            }
         }
         else
         {
