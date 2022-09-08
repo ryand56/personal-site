@@ -6,6 +6,7 @@ import {
   SiJavascript,
   SiVisualstudiocode,
   SiReact,
+  SiGatsby,
   SiNextdotjs as SiNextJs,
   SiStyledcomponents as SiStyledComponents,
   SiCsharp,
@@ -46,6 +47,7 @@ const Index = () => (
       <TechItem icon={SiJavascript} name="JavaScript" />
       <TechItem icon={SiVisualstudiocode} name="VSCode" />
       <TechItem icon={SiReact} name="React.js" />
+      <TechItem icon={SiGatsby} name="Gatsby.js" />
       <TechItem icon={SiNextJs} name="Next.js" />
       <TechItem icon={SiStyledComponents} name="styled-components" />
       <TechItem icon={SiCsharp} name="CSharp" />

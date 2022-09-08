@@ -1,7 +1,7 @@
 module.exports = {
   siteMetadata: {
     title: `Personal Site`,
-    siteUrl: `https://ryand.tech`
+    siteUrl: `https://ryand.ca`
   },
   plugins: ["gatsby-plugin-styled-components", "gatsby-plugin-image", "gatsby-plugin-sitemap", {
     resolve: 'gatsby-plugin-manifest',

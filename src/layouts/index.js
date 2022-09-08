@@ -23,6 +23,7 @@ export default Layout;
 export const Head = () => (
     <>
         <title>ryand</title>
+        <link rel="shortcut icon" type="image/png" href="https://dcdn.dstn.to/avatars/660292639412846621" />
         <meta name="theme-color" content="#000000" />
         <meta
             name="keywords"
