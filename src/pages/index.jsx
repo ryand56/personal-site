@@ -35,6 +35,7 @@ const Index = () => (
       I'm extending my knowledge for everything about technology, including learning more about web
       frameworks or different software languages. Sometimes, I also extend my knowledge about
       cybersecurity and public key infrastructures.
+      You can take a look at my company <a className="text-gray-900 dark:text-gray-400" target="_blank" href="https://www.emeraldsys.xyz">here</a>.
     </p>
 
     <h2 className="font-medium text-3xl mb-4">Technologies 💻</h2>
