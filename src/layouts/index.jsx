@@ -4,6 +4,7 @@ import "react-tippy/dist/tippy.css";
 import * as React from "react";
 import { AnimatePresence } from "framer-motion";
 import Nav from "../components/Nav";
+import Spotify from "../components/Spotify";
 
 const Layout = ({ children }) => (
     <>
@@ -14,6 +15,7 @@ const Layout = ({ children }) => (
                     {children}
                 </AnimatePresence>
             </div>
+            <Spotify />
         </div>
     </>
 );
