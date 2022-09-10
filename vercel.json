@@ -1,5 +1,10 @@
 {
 	"github": {
 		"silent": true
-	}
+	},
+	"redirects": [
+		{ "source": "/github", "destination": "https://github.com/elementemerald" },
+		{ "source": "/twitter", "destination": "https://twitter.com/elementemerald" },
+		{ "source": "/linkedin", "destination": "https://linkedin.com/in/ryand56" }
+	]
 }
