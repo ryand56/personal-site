@@ -28,6 +28,11 @@ const Spotify = () => {
             setLength(length);
             setLengthText(msToMinSeconds(length));
         }
+        else
+        {
+            setLength(NaN);
+            setLengthText("");
+        }
     }, [user]);
 
     React.useEffect(() => {
@@ -51,6 +56,12 @@ const Spotify = () => {
             setTimeWidth(width);
             setElapsed(timeElapsed);
             setElapsedText(msToMinSeconds(timeElapsed));
+        }
+        else
+        {
+            setTimeWidth("0%");
+            setElapsed(NaN);
+            setElapsedText("");
         }
     }, [current]);
 
@@ -80,35 +91,27 @@ const Spotify = () => {
                         />
                     </Tooltip>
                     <div className="w-56 h-full flex flex-col items-start justify-center">
-                        <Tooltip title={user.spotify.song} position={"top"} duration={250} animation={"perspective"}>
-                            <a
-                                href={`https://open.spotify.com/track/${user.spotify.track_id}`}
-                                target="_blank"
-                                rel="noreferrer"
-                                className="w-full font-medium text-gray-900 dark:text-[#e1eafd] hover:underline truncate"
-                            >
-                                {user.spotify.song}
-                            </a>
-                        </Tooltip>
-                        <Tooltip title={user.spotify.artist} position={"top"} duration={250} animation={"perspective"}>
-                            <p className="w-full text-gray-600 dark:text-[#cad2e0] font-normal text-sm truncate">
-                                {user.spotify.artist}
+                        <a
+                            href={`https://open.spotify.com/track/${user.spotify.track_id}`}
+                            target="_blank"
+                            rel="noreferrer"
+                            className="w-full font-medium text-gray-900 dark:text-[#e1eafd] hover:underline truncate hover:overflow-visible"
+                        >
+                            {user.spotify.song}
+                        </a>
+                        <p className="w-full text-gray-600 dark:text-[#cad2e0] font-normal text-sm truncate hover:overflow-visible">
+                            {user.spotify.artist}
+                        </p>
+                        <div className="w-full flex flex-row gap-2">
+                            <p className="text-gray-600 dark:text-[#cad2e0] font-light text-sm">
+                                {elapsedText}
                             </p>
-                        </Tooltip>
-                        <div className="w-full translate-y-[0.3rem] h-1 bg-[#4f545c]/[.16] min-w-[4px] rounded-sm mb-1">
-                            <Tooltip
-                                position={"top"}
-                                duration={250}
-                                animation={"perspective"}
-                                useContext={true}
-                                html={(
-                                    <div>
-                                        {elapsedText} / {lengthText}
-                                    </div>
-                                )}
-                            >
+                            <div className="w-full translate-y-[0.4rem] h-1 bg-[#4f545c]/[.16] min-w-[4px] rounded-sm mb-1">
                                 <div className="h-full bg-white rounded-sm" style={{ width: timeWidth }} />
-                            </Tooltip>
+                            </div>
+                            <p className="text-gray-600 dark:text-[#cad2e0] font-light text-sm">
+                                {lengthText}
+                            </p>
                         </div>
                     </div>
                 </div>
