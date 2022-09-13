@@ -47,7 +47,7 @@ const Spotify = ({ src, current }) => {
             setElapsed(NaN);
             setElapsedText("");
         }
-    }, [current]);
+    }, [src, current, length]);
 
     return (
         src && <motion.div
@@ -89,8 +89,8 @@ const Spotify = ({ src, current }) => {
                         <p className="text-gray-600 dark:text-[#cad2e0] font-light text-sm">
                             {elapsedText}
                         </p>
-                        <div className="w-full translate-y-[0.4rem] h-1 bg-transparent min-w-[4px] border border-white rounded-sm mb-1">
-                            <div className="h-full bg-white rounded-sm" style={{ width: timeWidth }} />
+                        <div className="w-full translate-y-[0.4rem] h-1 bg-transparent min-w-[4px] border border-black dark:border-white rounded-sm mb-1">
+                            <div className="h-full bg-black dark:bg-white rounded-sm" style={{ width: timeWidth }} />
                         </div>
                         <p className="text-gray-600 dark:text-[#cad2e0] font-light text-sm">
                             {lengthText}
