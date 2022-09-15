@@ -9,9 +9,11 @@ const TimeStatus = () => {
         let current = date.toLocaleString("en-US", {
             timeZone: "America/Edmonton"
         });
-        setTime(`${current.slice(-10, -6)}${current.slice(-3, -1)}.M.`);
 
         let hours = date.getHours();
+        let isTwo = ((hours >= 10 && hours < 13) || hours >= 22);
+        
+        setTime(`${current.slice(isTwo ? -11 : -10, -6)}${current.slice(-3, -1)}.M.`);
         if (hours >= 2 && hours < 10) setAwake(false);
     };
 
