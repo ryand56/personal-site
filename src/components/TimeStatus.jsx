@@ -12,8 +12,6 @@ const TimeStatus = () => {
 
         let hours = date.getHours();
         let isTwo = ((hours >= 10 && hours < 13) || hours >= 22 || hours <= 0);
-        console.log(hours);
-        console.log(isTwo);
         
         setTime(`${current.slice(isTwo ? -11 : -10, -6)}${current.slice(-3, -1)}.M.`);
         if (hours >= 2 && hours < 10) setAwake(false);
