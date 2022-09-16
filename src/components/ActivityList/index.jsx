@@ -1,12 +1,10 @@
 import * as React from "react";
-import { useLanyardWs } from "use-lanyard";
 import { AnimatePresence } from "framer-motion";
 
 import Spotify from "./Spotify";
 import Activity from "./Activity";
 
-const ActivityList = () => {
-    const user = useLanyardWs("660292639412846621");
+const ActivityList = ({ user }) => {
     const [current, setCurrent] = React.useState(new Date().getTime());
 
     React.useEffect(() => {

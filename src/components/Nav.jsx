@@ -3,6 +3,7 @@ import { useLocation } from "@reach/router";
 
 import { motion, AnimatePresence } from "framer-motion";
 
+import { IoNavigateOutline } from "react-icons/io5";
 import {
     SiTwitter,
     SiGithub,
@@ -43,24 +44,28 @@ const LinkButton = ({ icon, href }) => (
     </a>
 );
 
-const Nav = () => {
-    const location = useLocation();
+const Nav = ({ user }) => {
+    const windowLoc = useLocation();
 
     const [mobileMenuOpen, setMenuOpen] = React.useState(false);
     const toggleMenu = () => {
         setMenuOpen(old => !old);
     };
 
+    const userLoc = user.kv.location;
+
     return (
         <>
             <motion.div className="hidden z-[999] fixed w-[90%] md:w-[50rem] xs:flex flex-row justify-between items-center px-4 py-2 mt-4 md:mt-6 rounded-md bg-white/60 dark:bg-[#12181d]/60 border border-slate-800/50 backdrop-blur-lg">
                 <div className="flex flex-row items-center justify-between gap-2">
                     <ThemeToggle />
-                    <LandingButton name="Home" link="/" selected={location.pathname === "/"} />
-                    <LandingButton name="Contact" link="/contact" selected={location.pathname === "/contact"} />
+                    <LandingButton name="Home" link="/" selected={windowLoc.pathname === "/"} />
+                    <LandingButton name="Contact" link="/contact" selected={windowLoc.pathname === "/contact"} />
                 </div>
 
                 <div className="flex flex-row items-center justify-center gap-2 xs:gap-4">
+                    <IoNavigateOutline className="w-6 h-6" />
+                    <span className="font-semibold dark:text-gray-300">{userLoc}</span>
                     <LinkButton
                         href={"https://github.com/elementemerald"}
                         icon={<SiGithub className="w-6 h-6 cursor-pointer" />}
@@ -117,13 +122,13 @@ const Nav = () => {
                                 <MobileLandingButton
                                     name="Home"
                                     link="/"
-                                    selected={location.pathname === "/"}
+                                    selected={windowLoc.pathname === "/"}
                                     onClick={() => setMenuOpen(false)}
                                 />
                                 <MobileLandingButton
                                     name="Contact"
                                     link="/contact"
-                                    selected={location.pathname === "/contact"}
+                                    selected={windowLoc.pathname === "/contact"}
                                     onClick={() => setMenuOpen(false)}
                                 />
                             </div>
