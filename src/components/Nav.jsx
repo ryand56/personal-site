@@ -2,6 +2,7 @@ import * as React from "react";
 import { useLocation } from "@reach/router";
 
 import { motion, AnimatePresence } from "framer-motion";
+import { Tooltip } from "react-tippy";
 
 import { IoNavigateOutline } from "react-icons/io5";
 import {
@@ -38,10 +39,12 @@ const MobileLandingButton = ({ name, link, selected, onClick }) => (
     </Link>
 );
 
-const LinkButton = ({ icon, href }) => (
-    <a target="_blank" rel="noreferrer" href={href}>
-        {icon}
-    </a>
+const LinkButton = ({ title, icon, href }) => (
+    <Tooltip title={title} position={"top"} duration={250} animation={"perspective"}>
+        <a target="_blank" rel="noreferrer" href={href}>
+            {icon}
+        </a>
+    </Tooltip>
 );
 
 const Nav = ({ user }) => {
@@ -54,6 +57,11 @@ const Nav = ({ user }) => {
 
     const userLoc = user.kv.location;
 
+    /* <div className="flex flex-row items-center justify-center gap-0.5 xs:gap-2">
+        <IoNavigateOutline className="w-6 h-6" />
+        <span className="font-semibold dark:text-gray-300">{userLoc}</span>
+    </div> */
+
     return (
         <>
             <motion.div className="hidden z-[999] fixed w-[90%] md:w-[50rem] xs:flex flex-row justify-between items-center px-4 py-2 mt-4 md:mt-6 rounded-md bg-white/60 dark:bg-[#12181d]/60 border border-slate-800/50 backdrop-blur-lg">
@@ -64,27 +72,36 @@ const Nav = ({ user }) => {
                 </div>
 
                 <div className="flex flex-row items-center justify-center gap-2 xs:gap-4">
-                    <div className="flex flex-row items-center justify-center gap-0.5 xs:gap-2">
-                        <IoNavigateOutline className="w-6 h-6" />
-                        <span className="font-semibold dark:text-gray-300">{userLoc}</span>
-                    </div>
                     <LinkButton
+                        title={userLoc}
+                        href={"https://www.google.ca/maps/place/Alberta"}
+                        icon={<IoNavigateOutline className="w-6 h-6 cursor-pointer" />}
+                    />
+                    <LinkButton
+                        title={"GitHub"}
                         href={"https://github.com/elementemerald"}
                         icon={<SiGithub className="w-6 h-6 cursor-pointer" />}
                     />
                     <LinkButton
+                        title={"Twitter"}
                         href={"https://twitter.com/elementemerald"}
                         icon={<SiTwitter className="w-6 h-6 cursor-pointer" />}
                     />
                     <LinkButton
+                        title={"LinkedIn"}
                         href={"https://linkedin.com/in/ryand56"}
                         icon={<SiLinkedin className="w-6 h-6 cursor-pointer" />}
                     />
                     <LinkButton
+                        title={"Keybase"}
                         href={"https://keybase.io/ryand56"}
                         icon={<SiKeybase className="w-6 h-6 cursor-pointer" />}
                     />
-                    <LinkButton href={"mailto:ryand@emeraldsys.xyz"} icon={<FiMail className="w-6 h-6 cursor-pointer" />} />
+                    <LinkButton
+                        title={"Email"}
+                        href={"mailto:ryand@emeraldsys.xyz"}
+                        icon={<FiMail className="w-6 h-6 cursor-pointer" />}
+                    />
                 </div>
             </motion.div>
 

@@ -14,6 +14,7 @@ import {
   SiPython,
   SiGit
 } from "react-icons/si";
+import { HiLockClosed } from "react-icons/hi";
 import { TechItem } from "../components/TechItem";
 
 const Index = () => (
@@ -55,6 +56,7 @@ const Index = () => (
       <TechItem icon={SiCplusplus} name="C++" />
       <TechItem icon={SiPython} name="Python" />
       <TechItem icon={SiGit} name="Git" />
+      <TechItem icon={HiLockClosed} name="PKI" />
     </div>
   </motion.div>
 );
