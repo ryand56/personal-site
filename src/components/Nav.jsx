@@ -64,8 +64,10 @@ const Nav = ({ user }) => {
                 </div>
 
                 <div className="flex flex-row items-center justify-center gap-2 xs:gap-4">
-                    <IoNavigateOutline className="w-6 h-6" />
-                    <span className="font-semibold dark:text-gray-300">{userLoc}</span>
+                    <div className="flex flex-row items-center justify-center gap-0.5 xs:gap-2">
+                        <IoNavigateOutline className="w-6 h-6" />
+                        <span className="font-semibold dark:text-gray-300">{userLoc}</span>
+                    </div>
                     <LinkButton
                         href={"https://github.com/elementemerald"}
                         icon={<SiGithub className="w-6 h-6 cursor-pointer" />}
