@@ -1,2 +1,2 @@
 # personal-site
-Inspired by [cnrad](https://github.com/cnrad)'s [personal site](https://github.com/cnrad/cnrad.dev).
+Inspired by [cnrad](https://github.com/cnrad)'s [personal site](https://github.com/cnrad/cnrad.dev). Utilizes [Lanyard](https://github.com/Phineas/lanyard) for displaying Spotify now playing.
