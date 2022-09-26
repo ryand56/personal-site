@@ -6,6 +6,7 @@ import { useLanyardWs } from "use-lanyard";
 import { AnimatePresence } from "framer-motion";
 import Nav from "../components/Nav";
 import ActivityList from "../components/ActivityList";
+import Footer from "../components/Footer";
 
 const Layout = ({ children }) => {
     const user = useLanyardWs("660292639412846621");
@@ -20,6 +21,7 @@ const Layout = ({ children }) => {
                     </AnimatePresence>
                 </div>
                 {user && <ActivityList user={user} />}
+                <Footer />
             </div>
         </>
     );

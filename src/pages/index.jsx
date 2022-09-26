@@ -12,10 +12,13 @@ import {
   SiCsharp,
   SiCplusplus,
   SiPython,
+  SiJava,
   SiGit
 } from "react-icons/si";
 import { HiLockClosed } from "react-icons/hi";
 import { TechItem } from "../components/TechItem";
+
+import Age from "../components/Age";
 
 const Index = () => (
   <motion.div
@@ -27,7 +30,7 @@ const Index = () => (
   >
     <h1 className="mt-36 font-bold text-4xl md:text-5xl mb-4">Hey, I'm Ryan 👌</h1>
     <p className="text-gray-800 dark:text-gray-300 leading-6 tracking-wide mb-12">
-      I'm a Canadian software/web developer. I'm actively pursuing software development
+      I'm a <Age /> year old Canadian software/web developer. I'm actively pursuing software development
       and full-stack web development.
     </p>
 
@@ -55,6 +58,7 @@ const Index = () => (
       <TechItem icon={SiCsharp} name="CSharp" />
       <TechItem icon={SiCplusplus} name="C++" />
       <TechItem icon={SiPython} name="Python" />
+      <TechItem icon={SiJava} name="Java" />
       <TechItem icon={SiGit} name="Git" />
       <TechItem icon={HiLockClosed} name="PKI" />
     </div>
