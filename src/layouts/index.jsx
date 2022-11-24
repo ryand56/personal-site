@@ -2,14 +2,21 @@ import "../styles/global.css";
 import "react-tippy/dist/tippy.css";
 
 import * as React from "react";
-import { useLanyardWs } from "use-lanyard";
+import { useLanyardWS } from "use-lanyard";
 import { AnimatePresence } from "framer-motion";
 import Nav from "../components/Nav";
 import ActivityList from "../components/ActivityList";
 import Footer from "../components/Footer";
 
 const Layout = ({ children }) => {
-    const user = useLanyardWs("660292639412846621");
+    const user = useLanyardWS("660292639412846621", {
+        initialData: {
+            kv: {
+                location: "Lanyard offline - No information available"
+            },
+            activities: []
+        }
+    });
 
     return (
         <>
