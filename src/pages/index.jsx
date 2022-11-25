@@ -46,7 +46,7 @@ const Index = () => {
             transition={{ ease: "easeOut", duration: 0.3 }}
             className="text-gray-800 dark:text-gray-300 leading-6 tracking-wide mb-12"
           >
-            I'm a <Age /> year old Canadian software/web developer. I'm actively pursuing software development
+            I'm a <Age /> year old Canadian software/web developer that is on the autism spectrum and has high functioning autism. I'm actively pursuing software development
             and full-stack web development.
           </motion.p>
 
