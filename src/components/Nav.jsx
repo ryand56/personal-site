@@ -9,7 +9,8 @@ import {
     SiTwitter,
     SiGithub,
     SiLinkedin,
-    SiKeybase
+    SiKeybase,
+    SiGitea
 } from "react-icons/si";
 import { FiMail } from "react-icons/fi";
 import { HiMenu, HiX } from "react-icons/hi";
@@ -81,6 +82,11 @@ const Nav = ({ user }) => {
                         title={"GitHub"}
                         href={"https://github.com/elementemerald"}
                         icon={<SiGithub className="w-6 h-6 cursor-pointer" />}
+                    />
+                    <LinkButton
+                        title={"Gitea"}
+                        href={"https://git.ryand.ca"}
+                        icon={<SiGitea className="w-6 h-6 cursor-pointer" />}
                     />
                     <LinkButton
                         title={"Twitter"}
