@@ -164,6 +164,10 @@ const Nav = ({ user }) => {
                                     icon={<SiGithub className="w-6 h-6 cursor-pointer" />}
                                 />
                                 <LinkButton
+                                    href={"https://git.ryand.ca"}
+                                    icon={<SiGitea className="w-6 h-6 cursor-pointer" />}
+                                />
+                                <LinkButton
                                     href={"https://twitter.com/elementemerald"}
                                     icon={<SiTwitter className="w-6 h-6 cursor-pointer" />}
                                 />
