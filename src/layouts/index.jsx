@@ -43,9 +43,9 @@ export const Head = () => (
         <meta name="theme-color" content="#000000" />
         <meta
             name="keywords"
-            content="ryand, Ryan Omasta, Ryan, Omasta, web developer, software developer, github, javascript"
+            content="ryand, Ryan O., Ryan, O., web developer, software developer, github"
         />
-        <meta name="description" content="Ryan Omasta - Software/Web Developer" />
-        <meta name="author" content="Ryan Omasta" />
+        <meta name="description" content="Ryan O - Software/Web Developer" />
+        <meta name="author" content="Ryan O" />
     </>
 );

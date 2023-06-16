@@ -13,7 +13,7 @@ const Footer = () => {
             className="fixed right-6 bottom-0 hidden lg:block"
         >
             <span className="text-gray-600 font-light text-xs">
-                &copy; {year} Ryan Omasta - <a className="decoration-dotted underline underline-offset-4"
+                &copy; {year} Ryan O. - <a className="decoration-dotted underline underline-offset-4"
                     target="_blank"
                     href="https://github.com/elementemerald/personal-site"
                 >
